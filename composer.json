@@ -11,24 +11,28 @@
         }
     ],
     "repositories": [
-      {
-        "type": "vcs",
-        "url": "https://github.com/hicham-sabihi/aliznet_wcs_connector.git",
-        "branch": "master"
-      }
+        {
+            "type": "package",
+            "package": {
+                "name": "weaverryan/derp-dangerzone",
+                "version": "dev-master",
+                "source": {
+                    "url": "https://github.com/aliznet-labs/WCSConnector.git",
+                    "type": "git",
+                    "reference": "master"
+                },
+                "autoload": {
+                    "psr-0" : {
+                        "Aliznet" : "src"
+                    }
+                }
+            }
+        }
     ],
     "require": {
         "php": ">=5.3.2",
         "symfony/framework-bundle": ">=2.1", 
         "twig/twig": "*",
         "doctrine/doctrine-bundle": "*"
-        "Aliznet/WCSBundle" : "dev-master"
-    },
-    "autoload": {
-    "psr-4": {
-      "": "src"
-    },
-    "target-dir": "Aliznet/WCSBundle",
-    "minimum-stability": "*"
     }
 }
