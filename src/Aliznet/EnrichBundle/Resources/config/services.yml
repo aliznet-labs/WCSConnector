@@ -1,3 +1,0 @@
-parameters:
-    pim_enrich.view_element.category.tab.property.template: 'AliznetEnrichBundle:CategoryTree:Tab/property.html.twig'
-    
