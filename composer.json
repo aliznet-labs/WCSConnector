@@ -1,5 +1,5 @@
 {
-    "name": "Aliznet/WCSBundle",
+    "name": "Aliznet",
     "type": "symfony-bundle",
     "description": "The Websphere Commerce Connector for Akeneo",
     "keywords": ["wcs", "akeneo", "pim"],
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4" : {
-            "Aliznet\\" : "src"
+            "Aliznet\\" : "src/Aliznet"
         }
     }
 }
