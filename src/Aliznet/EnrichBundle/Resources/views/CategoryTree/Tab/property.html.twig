@@ -1,0 +1,42 @@
+<div class="tab-pane tab-property {{ viewElement.loop.first ? 'active' : '' }}" id="{{ viewElement.alias|replace({' ': '-', '.': '-'})|lower }}">
+    {% set generalProperties %}
+        {{ form_row(form.code) }}
+        {{ form_row(form.display) }}
+        {{ form_row(form.thumbnail) }}
+        {{ form_row(form.fullImage) }}
+    {% endset %}
+
+    {% set nodeValues %}
+        {{ form_row(form.label) }}   
+    {% endset %}
+    
+    {% set nameTrans %}
+        {{ form_row(form.name) }}
+    {% endset %}
+    
+    {% set descriptionTrans %}
+        {{ form_row(form.description) }} 
+    {% endset %}
+    
+    {% set longDescriptionTrans %}
+        {{ form_row(form.longDescription) }}
+    {% endset %}
+    
+    {% set keywordTrans %}
+        {{ form_row(form.keyword) }}
+    {% endset %} 
+
+    {{ elements.accordion({ 'pane.accordion.general_properties': generalProperties,
+       'pane.accordion.node_values': nodeValues, 
+       'pane.accordion.nameTrans': nameTrans,
+       'pane.accordion.descriptionTrans': descriptionTrans,
+       'pane.accordion.longDescriptionTrans': longDescriptionTrans,
+       'pane.accordion.keywordTrans': keywordTrans}) }}
+</div>
+
+{% if form.vars.value.id %}
+    <div class="tab-pane" id="history">
+        {% import 'PimDataGridBundle::macros.html.twig' as dataGrid %}
+        {{ dataGrid.renderHistoryGrid(form.vars.value) }}
+    </div>
+{% endif %}

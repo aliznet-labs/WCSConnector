@@ -1,0 +1,46 @@
+connector:
+    name: ALIZNET WCS Connector
+    jobs:
+        ## Export Attribute.
+        wcs_attribute_export:
+            title: aliznet_wcs_export.jobs.wcs_attribute_export.title
+            type:  export
+            steps:
+                export:
+                    title:     aliznet_wcs_export.jobs.wcs_attribute_export.export.title
+                    services:
+                       reader:    aliznet_wcs.reader.orm.attribute
+                       processor: aliznet_wcs.processor.attribute
+                       writer:    aliznet_wcs.writer.file.csv
+                       
+        wcs_attribute_values_export:
+            title: aliznet_wcs_export.jobs.wcs_attribute_values_export.title
+            type:  export
+            steps:
+                export:
+                    title:     aliznet_wcs_export.jobs.aliznet_wcs_attribute_values_export.export.title
+                    services:
+                        reader:    aliznet_wcs.reader.orm.attribute_values
+                        processor: aliznet_wcs.processor.attribute_values
+                        writer:    aliznet_wcs.writer.file.attribute.csv
+        #wcs_product_export:
+            #title: aliznet_wcs_export.jobs.wcs_product_export.title
+            #type:  export
+            #steps:
+                #export:
+                    #title:     aliznet_wcs_export.jobs.aliznet_wcs_product_export.export.title
+                    #services:
+                        #reader:    aliznet_wcs.reader.doctrine.product
+                        #processor: pim_base_connector.processor.product_to_flat_array
+                        #writer:    pim_base_connector.writer.file.csv_product
+        ## Export Categories.    
+        wcs_category_export:
+            title: aliznet_wcs_export.jobs.wcs_category_export.title
+            type:  export
+            steps:
+                export:
+                    title:     aliznet_wcs_export.jobs.aliznet_wcs_category_export.title
+                    services:
+                        reader:    aliznet_wcs.reader.orm.category
+                        processor: aliznet_wcs.processor.category
+                        writer:    aliznet_wcs.writer.file.category.csv

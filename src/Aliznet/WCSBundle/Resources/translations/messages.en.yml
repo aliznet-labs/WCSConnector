@@ -1,0 +1,52 @@
+aliznet_wcs_export:
+    ## Job titles
+    jobs:
+        wcs_attribute_export:
+            title: WCS attribute export
+            export.title: attribute export
+        wcs_attribute_values_export:
+            title: WCS attribute values export
+            export.title: attribute values export
+        wcs_product_export:
+            title: WCS products export
+            export.title: product export
+        wcs_category_export:
+            title: WCS Category export 
+            export.title: category export
+    
+    ## Import/export configuration fields (for readers, processors, writers)
+    export:
+        Attributes:
+            label:  attributes
+            help: Code of attributes separated by comas (example picture,pdf_description)
+        includeexclude:
+            label: Excluded or Included attributes
+            help: Choose if you want to exclude or include the attributes in the below field.
+        language:
+            label: attributes language
+            help: Code of attributes language to export (example en_US, fr_FR)
+        excludedCategories:
+            label: Excluded root categories
+            help: Root categories codes to exclude (separated by comas, it will also exclude its children)
+            
+        exportImages:
+            label: Export Images
+            help: Do we also export the images of the products
+        exportPriceOnly:
+            label: Data to export
+            help: Choose data to export
+        isEnabled:
+            label: Products status
+            help: Yes for enabled / No for disabled
+        isComplete:
+            label: Products completness
+            help: Yes for complete product / No for uncomplete product
+        excludedCategories:
+            label: Excluded root categories
+            help: Root categories codes to exclude (separated by comas, it will also exclude its children)
+
+pane.accordion:
+    nameTrans: Name values
+    descriptionTrans: Description values
+    longDescriptionTrans: Long description values
+    keywordTrans: Keyword values
