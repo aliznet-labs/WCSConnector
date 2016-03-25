@@ -1,0 +1,3 @@
+# /src/Aliznet/EnrichBundle/Resources/config/form_types.yml
+parameters:
+    pim_enrich.form.type.category.class: Aliznet\EnrichBundle\Form\Type\CategoryType

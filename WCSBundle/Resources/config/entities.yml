@@ -1,0 +1,4 @@
+# /src/Aliznet/WCSBundle/Resources/config/entities.yml
+parameters:
+    pim_catalog.entity.category.class:                  Aliznet\WCSBundle\Entity\Category
+    pim_catalog.entity.category_translation.class:      Aliznet\WCSBundle\Entity\CategoryTranslation

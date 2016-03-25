@@ -1,0 +1,17 @@
+parameters:
+    pim_base_connector.reader.doctrine.product.class: Pim\Bundle\BaseConnectorBundle\Reader\Doctrine\ORMProductReader
+
+services:
+    aliznet_wcs.processor.transformer:
+        class: %pim_base_connector.processor.transformer.class%
+        abstract: true
+        arguments:
+            - '@pim_base_connector.validator.import'
+            - '@translator'
+            - '@pim_transform.transformer.registry'
+            - '@pim_catalog.doctrine.smart_manager_registry'
+    aliznet_wcs.processor.csv_serializer:
+        abstract: true
+        arguments:
+            - '@pim_serializer'
+            - '@pim_catalog.manager.locale'
