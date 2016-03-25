@@ -22,7 +22,9 @@ Aliznet WCS Connector is extension that allows you to import your catalog from A
 
 - Execute update composer.phar :
 
+```
 php composer.phar update aliznet
+```
 
 
 
