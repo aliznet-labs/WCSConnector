@@ -1,7 +1,5 @@
 # Aliznet WCS Connector
 
-Websphere Commerce Connector for Akeneo
-
 Aliznet WCS Connector is extension that allows you to import your catalog from Akeneo CSV files into Websphere commerce.
 
 ## Installation
@@ -22,10 +20,8 @@ Aliznet WCS Connector is extension that allows you to import your catalog from A
     }
 ```
 
-- Add into in the require section:
-"aliznet":"dev-master"
-
 - Execute update composer.phar :
+
 php composer.phar update aliznet
 
 
